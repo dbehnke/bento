@@ -2,18 +2,18 @@
   "builders": [
     {
       "boot_command": [
-        "<tab> linux ks=http://{{ .HTTPIP }}:{{ .HTTPPort }}/fedora-18/ks.cfg<enter><wait>"
+        "<tab> text ks=http://{{ .HTTPIP }}:{{ .HTTPPort }}/centos-6.5/ks.cfg<enter><wait>"
       ],
       "boot_wait": "10s",
       "disk_size": 40960,
       "guest_additions_path": "VBoxGuestAdditions_{{.Version}}.iso",
-      "guest_os_type": "Fedora_64",
+      "guest_os_type": "Oracle",
       "http_directory": "http",
-      "iso_checksum": "91c5f0aca391acf76a047e284144f90d66d3d5f5dcd26b01f368a43236832c03",
-      "iso_checksum_type": "sha256",
-      "iso_url": "{{user `mirror`}}/releases/18/Fedora/x86_64/iso/Fedora-18-x86_64-DVD.iso",
-      "output_directory": "packer-fedora-18-x86_64-virtualbox",
-      "shutdown_command": "echo 'vagrant'|sudo -S shutdown -P now",
+      "iso_url": "{{user `mirror`}}/OracleLinux-R6-U5-Server-i386-dvd.iso",
+      "iso_checksum": "5bd0a06295a4e50907da16d99a2f6cff54596b30",
+      "iso_checksum_type": "sha1",
+      "output_directory": "packer-oracle-6.5-i386-virtualbox",
+      "shutdown_command": "echo 'vagrant'|sudo -S /sbin/halt -h -p",
       "ssh_password": "vagrant",
       "ssh_port": 22,
       "ssh_username": "vagrant",
@@ -24,7 +24,7 @@
           "modifyvm",
           "{{.Name}}",
           "--memory",
-          "512"
+          "480"
         ],
         [
           "modifyvm",
@@ -34,38 +34,38 @@
         ]
       ],
       "virtualbox_version_file": ".vbox_version",
-      "vm_name": "packer-fedora-18-x86_64"
+      "vm_name": "packer-oracle-6.5-i386"
     },
     {
       "boot_command": [
-        "<tab> linux ks=http://{{ .HTTPIP }}:{{ .HTTPPort }}/fedora-18/ks.cfg<enter><wait>"
+        "<tab> text ks=http://{{ .HTTPIP }}:{{ .HTTPPort }}/centos-6.5/ks.cfg<enter><wait>"
       ],
       "boot_wait": "10s",
       "disk_size": 40960,
-      "guest_os_type": "fedora-64",
+      "guest_os_type": "oraclelinux",
       "http_directory": "http",
-      "iso_checksum": "91c5f0aca391acf76a047e284144f90d66d3d5f5dcd26b01f368a43236832c03",
-      "iso_checksum_type": "sha256",
-      "iso_url": "{{user `mirror`}}/releases/18/Fedora/x86_64/iso/Fedora-18-x86_64-DVD.iso",
-      "output_directory": "packer-fedora-18-x86_64-vmware",
-      "shutdown_command": "echo 'vagrant'|sudo -S shutdown -P now",
+      "iso_url": "{{user `mirror`}}/OracleLinux-R6-U5-Server-i386-dvd.iso",
+      "iso_checksum": "5bd0a06295a4e50907da16d99a2f6cff54596b30",
+      "iso_checksum_type": "sha1",
+      "output_directory": "packer-oracle-6.5-i386-vmware",
+      "shutdown_command": "echo 'vagrant'|sudo -S /sbin/halt -h -p",
       "ssh_password": "vagrant",
       "ssh_port": 22,
       "ssh_username": "vagrant",
       "ssh_wait_timeout": "10000s",
       "tools_upload_flavor": "linux",
       "type": "vmware-iso",
-      "vm_name": "packer-fedora-18-x86_64",
+      "vm_name": "packer-oracle-6.5-i386",
       "vmx_data": {
         "cpuid.coresPerSocket": "1",
-        "memsize": "512",
+        "memsize": "480",
         "numvcpus": "1"
       }
     }
   ],
   "post-processors": [
     {
-      "output": "../builds/{{.Provider}}/opscode_fedora-18_chef-{{user `chef_version`}}.box",
+      "output": "../builds/{{.Provider}}/opscode_oracle-6.5-i386_chef-{{user `chef_version`}}.box",
       "type": "vagrant"
     }
   ],
@@ -74,13 +74,14 @@
       "environment_vars": [
         "CHEF_VERSION={{user `chef_version`}}"
       ],
-      "execute_command": "echo 'vagrant' | {{.Vars}} sudo -E -S bash '{{.Path}}'",
+      "execute_command": "echo 'vagrant' | {{.Vars}} sudo -S -E bash '{{.Path}}'",
       "scripts": [
+        "scripts/centos/fix-slow-dns.sh",
         "scripts/common/sshd.sh",
+        "scripts/common/vagrant.sh",
         "scripts/common/vmtools.sh",
         "scripts/common/chef.sh",
-        "scripts/common/vagrant.sh",
-        "scripts/fedora/cleanup.sh",
+        "scripts/centos/cleanup.sh",
         "scripts/common/minimize.sh"
       ],
       "type": "shell"
@@ -88,7 +89,6 @@
   ],
   "variables": {
     "chef_version": "provisionerless",
-    "mirror": "http://mirrors.kernel.org/fedora"
+    "mirror": "http://mirrors.dotsrc.org/oracle-linux/OL6/U5/i386"
   }
 }
-

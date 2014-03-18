@@ -16,7 +16,7 @@ Vagrant can be instructed to install Chef at runtime using the
 
 ### VirtualBox
 
-These baseboxes were all built using a Mac OS X host running VirtualBox 4.3.2, and have that format of Guest Extensions.
+These baseboxes were all built using a Mac OS X host running VirtualBox 4.3.8, and have that format of Guest Extensions.
 
 * [opscode-centos-5.10-i386](http://opscode-vm-bento.s3.amazonaws.com/vagrant/virtualbox/opscode_centos-5.10-i386_chef-provisionerless.box)
 * [opscode-centos-5.10](http://opscode-vm-bento.s3.amazonaws.com/vagrant/virtualbox/opscode_centos-5.10_chef-provisionerless.box)
@@ -24,10 +24,8 @@ These baseboxes were all built using a Mac OS X host running VirtualBox 4.3.2, a
 * [opscode-centos-6.5](http://opscode-vm-bento.s3.amazonaws.com/vagrant/virtualbox/opscode_centos-6.5_chef-provisionerless.box)
 * [opscode-debian-6.0.8-i386](http://opscode-vm-bento.s3.amazonaws.com/vagrant/virtualbox/opscode_debian-6.0.8-i386_chef-provisionerless.box)
 * [opscode-debian-6.0.8](http://opscode-vm-bento.s3.amazonaws.com/vagrant/virtualbox/opscode_debian-6.0.8_chef-provisionerless.box)
-* [opscode-debian-7.2.0-i386](http://opscode-vm-bento.s3.amazonaws.com/vagrant/virtualbox/opscode_debian-7.2.0-i386_chef-provisionerless.box)
-* [opscode-debian-7.2.0](http://opscode-vm-bento.s3.amazonaws.com/vagrant/virtualbox/opscode_debian-7.2.0_chef-provisionerless.box)
-* [opscode-fedora-18-i386](http://opscode-vm-bento.s3.amazonaws.com/vagrant/virtualbox/opscode_fedora-18-i386_chef-provisionerless.box)
-* [opscode-fedora-18](http://opscode-vm-bento.s3.amazonaws.com/vagrant/virtualbox/opscode_fedora-18_chef-provisionerless.box)
+* [opscode-debian-7.4-i386](http://opscode-vm-bento.s3.amazonaws.com/vagrant/virtualbox/opscode_debian-7.4-i386_chef-provisionerless.box)
+* [opscode-debian-7.4](http://opscode-vm-bento.s3.amazonaws.com/vagrant/virtualbox/opscode_debian-7.4_chef-provisionerless.box)
 * [opscode-fedora-19-i386](http://opscode-vm-bento.s3.amazonaws.com/vagrant/virtualbox/opscode_fedora-19-i386_chef-provisionerless.box)
 * [opscode-fedora-19](http://opscode-vm-bento.s3.amazonaws.com/vagrant/virtualbox/opscode_fedora-19_chef-provisionerless.box)
 * [opscode-fedora-20-i386](http://opscode-vm-bento.s3.amazonaws.com/vagrant/virtualbox/opscode_fedora-20-i386_chef-provisionerless.box)
@@ -40,8 +38,6 @@ These baseboxes were all built using a Mac OS X host running VirtualBox 4.3.2, a
 * [opscode-ubuntu-12.04](http://opscode-vm-bento.s3.amazonaws.com/vagrant/virtualbox/opscode_ubuntu-12.04_chef-provisionerless.box)
 * [opscode-ubuntu-12.10-i386](http://opscode-vm-bento.s3.amazonaws.com/vagrant/virtualbox/opscode_ubuntu-12.10-i386_chef-provisionerless.box)
 * [opscode-ubuntu-12.10](http://opscode-vm-bento.s3.amazonaws.com/vagrant/virtualbox/opscode_ubuntu-12.10_chef-provisionerless.box)
-* [opscode-ubuntu-13.04-i386](http://opscode-vm-bento.s3.amazonaws.com/vagrant/virtualbox/opscode_ubuntu-13.04-i386_chef-provisionerless.box)
-* [opscode-ubuntu-13.04](http://opscode-vm-bento.s3.amazonaws.com/vagrant/virtualbox/opscode_ubuntu-13.04_chef-provisionerless.box)
 * [opscode-ubuntu-13.10-i386](http://opscode-vm-bento.s3.amazonaws.com/vagrant/virtualbox/opscode_ubuntu-13.10-i386_chef-provisionerless.box)
 * [opscode-ubuntu-13.10](http://opscode-vm-bento.s3.amazonaws.com/vagrant/virtualbox/opscode_ubuntu-13.10_chef-provisionerless.box)
 
@@ -56,10 +52,8 @@ The boxes should work unchanged in VMWare Workstation for Windows or Linux.
 * [opscode-centos-6.5](http://opscode-vm-bento.s3.amazonaws.com/vagrant/vmware/opscode_centos-6.5_chef-provisionerless.box)
 * [opscode-debian-6.0.8-i386](http://opscode-vm-bento.s3.amazonaws.com/vagrant/vmware/opscode_debian-6.0.8-i386_chef-provisionerless.box)
 * [opscode-debian-6.0.8](http://opscode-vm-bento.s3.amazonaws.com/vagrant/vmware/opscode_debian-6.0.8_chef-provisionerless.box)
-* [opscode-debian-7.2.0-i386](http://opscode-vm-bento.s3.amazonaws.com/vagrant/vmware/opscode_debian-7.2.0-i386_chef-provisionerless.box)
-* [opscode-debian-7.2.0](http://opscode-vm-bento.s3.amazonaws.com/vagrant/vmware/opscode_debian-7.2.0_chef-provisionerless.box)
-* [opscode-fedora-18-i386](http://opscode-vm-bento.s3.amazonaws.com/vagrant/vmware/opscode_fedora-18-i386_chef-provisionerless.box)
-* [opscode-fedora-18](http://opscode-vm-bento.s3.amazonaws.com/vagrant/vmware/opscode_fedora-18_chef-provisionerless.box)
+* [opscode-debian-7.4-i386](http://opscode-vm-bento.s3.amazonaws.com/vagrant/vmware/opscode_debian-7.4-i386_chef-provisionerless.box)
+* [opscode-debian-7.4](http://opscode-vm-bento.s3.amazonaws.com/vagrant/vmware/opscode_debian-7.4_chef-provisionerless.box)
 * [opscode-fedora-19-i386](http://opscode-vm-bento.s3.amazonaws.com/vagrant/vmware/opscode_fedora-19-i386_chef-provisionerless.box)
 * [opscode-fedora-19](http://opscode-vm-bento.s3.amazonaws.com/vagrant/vmware/opscode_fedora-19_chef-provisionerless.box)
 * [opscode-fedora-20-i386](http://opscode-vm-bento.s3.amazonaws.com/vagrant/vmware/opscode_fedora-20-i386_chef-provisionerless.box)
@@ -72,8 +66,6 @@ The boxes should work unchanged in VMWare Workstation for Windows or Linux.
 * [opscode-ubuntu-12.04](http://opscode-vm-bento.s3.amazonaws.com/vagrant/vmware/opscode_ubuntu-12.04_chef-provisionerless.box)
 * [opscode-ubuntu-12.10-i386](http://opscode-vm-bento.s3.amazonaws.com/vagrant/vmware/opscode_ubuntu-12.10-i386_chef-provisionerless.box)
 * [opscode-ubuntu-12.10](http://opscode-vm-bento.s3.amazonaws.com/vagrant/vmware/opscode_ubuntu-12.10_chef-provisionerless.box)
-* [opscode-ubuntu-13.04-i386](http://opscode-vm-bento.s3.amazonaws.com/vagrant/vmware/opscode_ubuntu-13.04-i386_chef-provisionerless.box)
-* [opscode-ubuntu-13.04](http://opscode-vm-bento.s3.amazonaws.com/vagrant/vmware/opscode_ubuntu-13.04_chef-provisionerless.box)
 * [opscode-ubuntu-13.10-i386](http://opscode-vm-bento.s3.amazonaws.com/vagrant/vmware/opscode_ubuntu-13.10-i386_chef-provisionerless.box)
 * [opscode-ubuntu-13.10](http://opscode-vm-bento.s3.amazonaws.com/vagrant/vmware/opscode_ubuntu-13.10_chef-provisionerless.box)
 
@@ -103,7 +95,17 @@ Congratulations! You now have box(es) in the ../builds directory that you can th
 
 ### Proprietary Boxes
 
-Red Hat Enterprise Linux and SUSE Linux Enterprise Server templates are provided; however, their ISOs are not publicly retrievable. The URLs in those templates are bogus; you should substitute your server where you host the ISOs, using the mirror variable as above.
+Mac OS X (10.7, 10.8, and 10.9), Red Hat Enterprise Linux, and SUSE Linux Enterprise Server templates are provided. However, their ISOs are not publicly retrievable and as such, the URLs in those templates are bogus. For RHEL and SLES, you should substitute your server where you host the ISOs, using the mirror variable as above.
+
+#### Mac OS X Boxes
+
+Mac OS X builds are supported for VMware only.  We would welcome a contribution to add VirtualBox support.
+
+To build a Mac OS X box, you will need to start with an installer for your desired version of OS X.  You will then need to use [Tim Sutton's osx-vm-templates](https://github.com/timsutton/osx-vm-templates)/) to modify that installer for use by packer.  The output of that build will include the location of the ISO and its checksum, which you can substitute into your `packer build` command, e.g.: 
+
+    $ packer build -var 'iso_checksum=<checksum>' -var 'iso_url=<iso_url>' macosx-10.9.json
+
+There is a known issue where [test-kitchen](http://kitchen.ci/) starts a Mac OS X box correctly, but `vagrant up` fails due to the absence of the HGFS kernel module.  This is due to a silent failure during the VMware tools installation and can be corrected by installing the VMware tools on the Mac OS X box manually. 
 
 ### Veewee Definitions
 
@@ -151,6 +153,8 @@ definitions originally based on
 [work done by Tim Dysinger](https://github.com/dysinger/basebox) to
 make "Don't Repeat Yourself" (DRY) modular baseboxes. Thanks Tim!
 
+Mac OS X templates were adopted wholesale from [Fletcher Nichol's packer templates](https://github.com/fnichol/packer-templates).
+
 - Author: Seth Chisamore (<schisamo@opscode.com>)
 - Author: Stephen Delano (<stephen@opscode.com>)
 - Author: Joshua Timberman (<joshua@opscode.com>)
@@ -159,6 +163,7 @@ make "Don't Repeat Yourself" (DRY) modular baseboxes. Thanks Tim!
 - Author: Julian Dunn (<jdunn@opscode.com>)
 - Author: Tom Duffield (<tom@opscode.com>)
 - Author: Ross Timson (<ross@rosstimson.com>)
+- Author: Fletcher Nichol (<fnichol@nichol.ca>)
 
 ```text
 Copyright 2012-2013, Opscode, Inc. (<legal@opscode.com>)
